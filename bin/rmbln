@@ -1,0 +1,6 @@
+#!/bin/bash
+#script to remove broken links in home directory. It will go as deep as ~/.dotfiles goes.
+DEPTH=$(find $HOME/.dotfiles -type d -printf '%d\n' | sort -rn | head -1)
+
+echo "Broken links removed:"
+find $HOME -maxdepth $DEPTH -xtype l -delete -print
