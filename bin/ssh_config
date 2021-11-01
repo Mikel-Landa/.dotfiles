@@ -116,8 +116,8 @@ if [[ "${writeconf}" == [yY] ]]; then
 	echo -e "\tIdentityFile ${ssh_idf}" >> $HOME/.ssh/config
 	echo -e "\tIdentitiesOnly yes" >> $HOME/.ssh/config
 	fi
-	echo -e "\tServerAliveInterval 180"
-	echo -e "\t ServerAliveCountMax 2"
+	echo -e "\tServerAliveInterval 180" >> $HOME/.ssh/config
+	echo -e "\t ServerAliveCountMax 2" >> $HOME/.ssh/config
 	#Confirm the new host was added 
 	echo -e "\nNew host added to ssh config!"
 	

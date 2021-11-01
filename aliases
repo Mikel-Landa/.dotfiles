@@ -1,6 +1,4 @@
-
-# NPM
-alias nrs="npm run serve"
+# NPM alias nrs="npm run serve"
 
 # DJANGO
 alias pm="python manage.py"
@@ -45,4 +43,8 @@ alias mux='pgrep -vx tmux > /dev/null && \
 		tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && \
 		tmux kill-session -t delete-me && \
 		tmux attach || tmux attach'
+
+# nvim
+
+alias vim='nvim'
 

@@ -33,9 +33,6 @@ nnoremap <leader>q :bdelete<CR>
 
 "}}}
 
-" Telescope mappings
-" nnoremap <leader>ff <cmd>Telescope find_files<cr>
-" nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-" nnoremap <leader>fb <cmd>Telescope buffers<cr>
-" nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-" nnoremap <leader>fd <cmd>Telescope file_browser<cr>
+"" Allow saving of files as sudo
+cmap w!! w !sudo tee > /dev/null %
+

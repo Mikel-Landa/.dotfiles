@@ -33,3 +33,5 @@ exit 0
 fi
 echo "pass"
 ssh-keygen -t $key_type -f $key_file -C "$comment" -N -q
+# important
+chmod 600 $key_file

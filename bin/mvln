@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# removes linked file and moves the original file to the link's location
+if [[ -L "$1" && -e "$1" ]]; then
+  echo "Moving `realpath $1` to $1"
+  mv -i `realpath $1` $1
+else 
+  echo "$1 is not a symlink"
+
+fi

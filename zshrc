@@ -74,7 +74,7 @@ plugins=(git zsh-autosuggestions zsh-z)
 
 
 
-PATH="$HOME/.bin:$HOME/bin:$HOME/.emacs.d/bin:$HOME/.poetry/bin:$PATH:/usr/local/go/bin:$HOME/go/bin"
+PATH="$HOME/.bin:$HOME/bin:$HOME/.emacs.d/bin:$HOME/.poetry/bin:/usr/local/go/bin:$HOME/go/bin:$PATH"
 # Clean PATH variable
 export PATH=$(echo $PATH | awk -F: '
 { for (i = 1; i <= NF; i++) arr[$i]; }
@@ -119,5 +119,5 @@ source /usr/share/fzf/key-bindings.zsh
 alias pacfz="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
 alias yayfz="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk \"{print \$2}\")' | xargs -ro  yay -S"
 
-neofetch
+neofetch --color_blocks off --cofig off --cpu_temp on --colors  6 6 6 6 111 111
 

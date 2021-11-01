@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    OS=$NAME
+    VER=$VERSION_ID
+elif [ -z ${OS+x} ]; then
+  echo "Can't get os name. You can consider modifying this script or exporting OS variable\
+  with a valid NAME of your distro"
+  exit 1
+fi
+
+INSTALL_DIR="$HOME/.dotfiles/.install"
+
+if [[ $OS == "Arch Linux" ]]; then
+  cd "$INSTALL_DIR/arch"
+  ./update-packages.sh
+fi
+
