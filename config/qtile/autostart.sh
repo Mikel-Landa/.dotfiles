@@ -2,8 +2,10 @@
 
 festival --tts $HOME/.config/qtile/welcome_msg &
 lxsession &
-picom &
 volumeicon &
+picom &
+nm-applet &
+udiskie -t &
 
 ### UNCOMMENT ONLY ONE OF THE FOLLOWING THREE OPTIONS! ###
 # 1. Uncomment to restore last saved wallpaper

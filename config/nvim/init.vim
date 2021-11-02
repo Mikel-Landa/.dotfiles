@@ -159,6 +159,9 @@ if (has("termguicolors"))
 " Extras "{{{
 " ---------------------------------------------------------------------
 set exrc
+
+"colorizer
+lua require'colorizer'.setup()
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:

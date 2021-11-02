@@ -8,10 +8,6 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-#if .profile.arch
-if [ -f .profile.arch ]; then
-	source .profile.arch
-fi
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -38,3 +34,9 @@ fi
 export PATH="$HOME/.poetry/bin:$PATH"
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+# keep at the bottom of the file
+#if .profile.arch
+if [ -f .profile.arch ]; then
+	source .profile.arch
+fi

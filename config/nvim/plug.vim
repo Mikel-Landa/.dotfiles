@@ -38,6 +38,10 @@ if has("nvim")
   
 
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  "org mode
+  Plug 'kristijanhusak/orgmode.nvim', { 'branch' : 'tree-sitter' }
+
+
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'onsails/lspkind-nvim'
   Plug 'nvim-lua/popup.nvim'
@@ -47,6 +51,10 @@ if has("nvim")
 
   Plug 'joshdick/onedark.vim'
   Plug 'sheerun/vim-polyglot'
+
+  "colorizer 
+  Plug 'norcalli/nvim-colorizer.lua'
+
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

@@ -22,6 +22,7 @@ require'nvim-treesitter.configs'.setup {
     "javascript",
     "bash",
     "python",
+    "org",
   },
 }
 

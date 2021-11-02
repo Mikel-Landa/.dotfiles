@@ -13,16 +13,15 @@ from typing import List  # noqa: F401from typing import List  # noqa: F401
 mod = "mod4"  # Sets mod key to SUPER/WINDOWS
 terminal = guess_terminal()
 myBrowser = "firefox"  # My browser of choice
+launcher = "/home/mikel/.config/rofi/launchers/text/launcher.sh"
 
 keys = [
-    Key(
-        [mod, "shift"],
-        "Return",
-        lazy.spawn("dmenu_run -p 'Run: '"),
-        desc="Run Launcher",
-    ),
+    Key([mod, "shift"], "Return", lazy.spawn(launcher), desc="Run Launcher"),
+    Key([mod], "Return", lazy.spawn(terminal), desc="Run Terminal"),
     Key([mod], "b", lazy.spawn(myBrowser), desc="Firefox"),
-    Key([mod], "d", lazy.window.kill(), desc="Kill active window"),
+    # Windows
+    Key([], "F11", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
+    # Qtile process
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     # Switch between windows
@@ -57,19 +56,17 @@ keys = [
     # Split = all windows displayed
     # Unsplit = 1 window displayed, like Max layout, but still with
     # multiple stack panes
-    Key(
-        [mod, "shift"],
-        "Return",
-        lazy.layout.toggle_split(),
-        desc="Toggle between split and unsplit sides of stack",
-    ),
-    Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
-    Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    # Volume
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
+    Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
+    # Brightness
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
     # Dmenu scripts launched using the key chord SUPER+p followed by 'key'
     KeyChord(
         [mod],
@@ -208,7 +205,7 @@ def init_widgets_list():
         widget.Image(
             filename="~/.config/qtile/icons/python-white.png",
             scale="False",
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(myTerm)},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal)},
         ),
         widget.Sep(linewidth=0, padding=6, foreground=colors[2], background=colors[0]),
         widget.GroupBox(
@@ -276,13 +273,14 @@ def init_widgets_list():
             fontsize=14,
         ),
         widget.CheckUpdates(
-            update_interval=1800,
-            distro="Arch_checkupdates",
+            update_interval=1,
+            distro="Arch",
             display_format="{updates} Updates",
             foreground=colors[2],
             mouse_callbacks={
-                "Button1": lambda: qtile.cmd_spawn(myTerm + " -e sudo pacman -Syu")
+                "Button1": lambda: qtile.cmd_spawn(terminal + " -e sudo pacman -Syu")
             },
+            no_update_string="0 Updates",
             background=colors[5],
         ),
         widget.TextBox(
@@ -298,7 +296,7 @@ def init_widgets_list():
         widget.Memory(
             foreground=colors[2],
             background=colors[4],
-            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(myTerm + " -e htop")},
+            mouse_callbacks={"Button1": lambda: qtile.cmd_spawn(terminal + " -e htop")},
             padding=5,
         ),
         widget.TextBox(
@@ -312,27 +310,12 @@ def init_widgets_list():
             scale=0.7,
         ),
         widget.CurrentLayout(foreground=colors[2], background=colors[4], padding=5),
-        widget.WidgetBox(
-            widgets=[
-                widget.TextBox(
-                    text=" Vol:", foreground=colors[2], background=colors[5], padding=0
-                ),
-                widget.Volume(
-                    foreground=colors[2],
-                    background=colors[5],
-                    padding=5,
-                ),
-                widget.TextBox(
-                    text="",
-                    background=colors[5],
-                    foreground=colors[4],
-                    padding=0,
-                    fontsize=37,
-                ),
-            ]
-        ),
         widget.Clock(
             foreground=colors[2], background=colors[5], format="%A, %B %d - %H:%M "
+        ),
+        widget.Systray(
+            foreground=colors[0],
+            background=colors[4],
         ),
     ]
     return widgets_list

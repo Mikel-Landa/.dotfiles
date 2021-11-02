@@ -113,8 +113,8 @@ source $HOME/.variables
 export DISABLE_AUTO_TITLE='true'
 
 # fzf
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
+source $HOME/.config/fzf/completion.zsh
+source $HOME/.config/fzf/key-bindings.zsh
 # needs to run sudo pacman -Fy (only once)
 alias pacfz="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
 alias yayfz="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk \"{print \$2}\")' | xargs -ro  yay -S"
