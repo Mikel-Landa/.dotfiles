@@ -55,6 +55,12 @@ if has("nvim")
   "colorizer 
   Plug 'norcalli/nvim-colorizer.lua'
 
+  "vim-which-key
+  Plug 'liuchengxu/vim-which-key'
+
+  " Being able to save as root
+  Plug 'lambdalisue/suda.vim'
+
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

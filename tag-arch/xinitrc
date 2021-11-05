@@ -51,6 +51,7 @@ fi
 twm &
 xclock -geometry 50x50-1+1 &
 setxkbmap -option caps:swapescape &
+setxkbmap us -variant intl &
 exec qtile start
 #xterm -geometry 80x50+494+51 &
 #xterm -geometry 80x20+494-0 &

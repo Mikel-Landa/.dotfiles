@@ -15,6 +15,7 @@ set fileencodings=utf-8,sjis,euc-jp,latin
 set encoding=utf-8
 set title
 set autoindent
+set hidden
 set background=dark
 set nobackup
 set hlsearch
@@ -162,6 +163,11 @@ set exrc
 
 "colorizer
 lua require'colorizer'.setup()
+
+" which-key
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
+set timeoutlen=500
+
 "}}}
 
 " vim: set foldmethod=marker foldlevel=0:

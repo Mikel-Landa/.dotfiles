@@ -15,12 +15,28 @@ terminal = guess_terminal()
 myBrowser = "firefox"  # My browser of choice
 launcher = "/home/mikel/.config/rofi/launchers/text/launcher.sh"
 
+
+def toggle_fullscreen():
+    """
+    Toggles fullscreen mode keeping pane in previous position.
+    """
+
+    def f(qtile):
+        import pprint
+
+        with open("/home/mikel/qtile.log", "w") as log_file:
+            pprint.pprint(dir(qtile.groups), log_file)
+
+    return lazy.function(f)
+
+
 keys = [
     Key([mod, "shift"], "Return", lazy.spawn(launcher), desc="Run Launcher"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Run Terminal"),
     Key([mod], "b", lazy.spawn(myBrowser), desc="Firefox"),
     # Windows
     Key([], "F11", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
+    Key([], "F12", toggle_fullscreen(), desc="Toggle fullscreen"),
     # Qtile process
     Key([mod, "shift"], "r", lazy.restart(), desc="Restart Qtile"),
     Key([mod, "shift"], "q", lazy.shutdown(), desc="Shutdown Qtile"),

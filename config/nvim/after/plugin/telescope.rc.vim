@@ -1,6 +1,7 @@
 if !exists('g:loaded_telescope') | finish | endif
 
 nnoremap <leader>ff  <cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr> 
+nnoremap <C-p> <cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fr <cmd>lua require('telescope.builtin').buffers({ show_all_buffers = true })<cr> 
