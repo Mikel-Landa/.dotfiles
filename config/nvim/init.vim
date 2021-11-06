@@ -20,7 +20,6 @@ set background=dark
 set nobackup
 set hlsearch
 set showcmd
-set cmdheight=1
 set laststatus=2
 set scrolloff=10
 set expandtab
@@ -170,4 +169,17 @@ set timeoutlen=500
 
 "}}}
 
+" Autocompletion
+  set encoding=utf-8
+  set nobackup
+  set nowritebackup
+  set cmdheight=1
+  set updatetime=300
+  set shortmess+=c
+  set signcolumn=number
 " vim: set foldmethod=marker foldlevel=0:
+"
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+
+

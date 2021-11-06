@@ -45,9 +45,6 @@ if has("nvim")
   Plug 'kyazdani42/nvim-web-devicons'
   Plug 'onsails/lspkind-nvim'
   Plug 'nvim-lua/popup.nvim'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-telescope/telescope.nvim'
-  Plug 'windwp/nvim-autopairs'
 
   Plug 'joshdick/onedark.vim'
   Plug 'sheerun/vim-polyglot'
@@ -61,6 +58,14 @@ if has("nvim")
   " Being able to save as root
   Plug 'lambdalisue/suda.vim'
 
+  " Comment lines
+  Plug 'winston0410/commented.nvim'
+
+  "Harpoon
+  Plug 'ThePrimeagen/harpoon'
+
+  Plug 'tpope/vim-obsession'
+  Plug 'rbong/vim-crystalline'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }

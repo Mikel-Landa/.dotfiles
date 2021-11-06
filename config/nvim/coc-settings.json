@@ -4,7 +4,7 @@
   // python config
   "python.linting.enabled": true,
   "python.linting.pylintEnabled": true,
-
+  "python.formatting.provider":"black",
   "snippets.ultisnips.directories":
   [
     "UltiSnips",

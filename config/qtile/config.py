@@ -3,15 +3,19 @@ import os
 import re
 import socket
 import subprocess
+from typing import List
+
 from libqtile import qtile
-from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
-from libqtile import layout, bar, widget, hook
+from libqtile import bar, hook, layout, widget
+from libqtile.config import Click, Drag, Group, Key, KeyChord, Match, Screen
+from libqtile.dgroups import simple_key_binder
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
-from typing import List  # noqa: F401from typing import List  # noqa: F401
+from libqtile.utils import (
+    guess_terminal,
+)  # noqa: F401from typing import List  # noqa: F401
 
 mod = "mod4"  # Sets mod key to SUPER/WINDOWS
-terminal = guess_terminal()
+terminal = guess_terminal(preference="alacritty")
 myBrowser = "firefox"  # My browser of choice
 launcher = "/home/mikel/.config/rofi/launchers/text/launcher.sh"
 
@@ -34,6 +38,7 @@ keys = [
     Key([mod, "shift"], "Return", lazy.spawn(launcher), desc="Run Launcher"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Run Terminal"),
     Key([mod], "b", lazy.spawn(myBrowser), desc="Firefox"),
+    Key([mod, "shift"], "f", lazy.layout.maximize(), desc="Firefox"),
     # Windows
     Key([], "F11", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
     Key([], "F12", toggle_fullscreen(), desc="Toggle fullscreen"),
@@ -146,7 +151,7 @@ groups = [
 # Allow MODKEY+[0 through 9] to bind to groups, see https://docs.qtile.org/en/stable/manual/config/groups.html
 # MOD4 + index Number : Switch to Group[index]
 # MOD4 + shift + index Number : Send active window to another Group
-from libqtile.dgroups import simple_key_binder
+
 
 dgroups_key_binder = simple_key_binder("mod4")
 
