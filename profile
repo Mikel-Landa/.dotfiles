@@ -25,6 +25,11 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+if [ -d "$HOME/.emacs.d/bin" ] ; then
+    PATH="$HOME/.emacs.d/bin:$PATH"
+fi
+
 # loads nvm if exists
 if [ -d "$HOME/.nvm" ] ; then
     export NVM_DIR="$HOME/.nvm"
