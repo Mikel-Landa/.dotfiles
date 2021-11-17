@@ -11,7 +11,7 @@ if !1 | finish | endif
 set nocompatible
 set number
 syntax enable
-set fileencodings=utf-8,sjis,euc-jp,latin
+set fileencodings=utf-8,latin
 set encoding=utf-8
 set title
 set autoindent
@@ -67,7 +67,7 @@ set formatoptions+=r
 
 " language
 set spell
-set spelllang=en,es  " Correct words both in English and Spanish
+set spelllang=en  " Correct words both in English and Spanish
 
 " Kite
 set laststatus=2

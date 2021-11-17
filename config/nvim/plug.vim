@@ -39,7 +39,7 @@ if has("nvim")
 
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   "org mode
-  Plug 'kristijanhusak/orgmode.nvim', { 'branch' : 'tree-sitter' }
+  Plug 'kristijanhusak/orgmode.nvim'
 
 
   Plug 'kyazdani42/nvim-web-devicons'
