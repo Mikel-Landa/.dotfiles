@@ -66,6 +66,7 @@ if has("nvim")
 
   Plug 'tpope/vim-obsession'
   Plug 'rbong/vim-crystalline'
+  Plug 'tpope/vim-surround'
 endif
 
 Plug 'groenewege/vim-less', { 'for': 'less' }
