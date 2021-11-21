@@ -1,4 +1,5 @@
 " use <tab> for trigger completion and navigate to the next complete item
+let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-pyright']
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
