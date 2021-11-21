@@ -149,7 +149,9 @@ lvim.builtin.treesitter.highlight.enabled = true
 -- Additional Plugins
 lvim.plugins = {
   { "p00f/nvim-ts-rainbow" },
-  {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+  {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'},
+  {"tpope/vim-surround"},
+  {"tpope/vim-repeat"},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
