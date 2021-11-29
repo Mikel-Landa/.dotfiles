@@ -1,4 +1,4 @@
-if !exists('g:loaded_telescope') | finish | endif
+if !exists('g:loaded_telescope') || exists('g:vscode') | finish | endif
 
 nnoremap <leader>ff  <cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr> 
 nnoremap <C-p> <cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>

@@ -1,4 +1,4 @@
-if !exists('g:loaded_defx') | finish | endif
+if !exists('g:loaded_defx') || exists('g:vscode')| finish | endif
 
 " Define mappings
 "cnoreabbrev sf Defx -listed -new

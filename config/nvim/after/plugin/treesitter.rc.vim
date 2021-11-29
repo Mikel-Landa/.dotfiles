@@ -1,3 +1,4 @@
+if exists('g:vscode') | finish | endif
 if !exists('g:loaded_nvim_treesitter')
   echom "Not loaded treesitter"
   finish
