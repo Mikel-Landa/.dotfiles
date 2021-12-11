@@ -57,6 +57,7 @@ lvim.builtin.telescope.defaults.mappings = {
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.cmp.active = true
+lvim.builtin.treesitter.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.show_icons.git = 0
 
