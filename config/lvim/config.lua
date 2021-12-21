@@ -153,6 +153,7 @@ lvim.plugins = {
   {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'},
   {"tpope/vim-surround"},
   {"tpope/vim-repeat"},
+  {'hashivim/vim-terraform'},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

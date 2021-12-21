@@ -53,3 +53,9 @@ alias vim='nvim'
 # system
 
 alias s='systemctl'
+
+# kubernetes
+alias k='kubectl'
+
+# terraform
+alias tf="terraform"

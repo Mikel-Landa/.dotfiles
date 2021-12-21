@@ -119,3 +119,5 @@ source $HOME/.config/fzf/key-bindings.zsh
 alias pacfz="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
 alias yayfz="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk \"{print \$2}\")' | xargs -ro  yay -S"
 
+# source autocompletions
+ for f in $HOME/.config/completions/zsh/*; do source $f; done
