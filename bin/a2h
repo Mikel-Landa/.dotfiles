@@ -1,0 +1,4 @@
+#!/bin/bash
+output="${1%.*}.html"
+cat $1 | ansi2html -s dracula > $output
+sed -i "s/.body_background { background-color: #000000; }/.body_background { background-color: #282a36; }/g" $output
