@@ -74,7 +74,7 @@ plugins=(git zsh-autosuggestions zsh-z sudo)
 
 
 
-PATH="$HOME/.bin:$HOME/bin:$HOME/.emacs.d/bin:$HOME/.poetry/bin:/usr/local/go/bin:$HOME/go/bin:$PATH"
+PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.bin:$HOME/bin:$HOME/.emacs.d/bin:$HOME/.poetry/bin:/usr/local/go/bin:$HOME/go/bin:$PATH"
 # Clean PATH variable
 export PATH=$(echo $PATH | awk -F: '
 { for (i = 1; i <= NF; i++) arr[$i]; }
@@ -107,6 +107,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# https://github.com/jonmosco/kube-ps1
+source $HOME/plugins/kube-ps1/kube-ps1.sh
+PROMPT='$(kube_ps1)'$PROMPT
 
 source $HOME/.aliases
 source $HOME/.variables
