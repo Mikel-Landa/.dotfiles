@@ -70,7 +70,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-z sudo)
+plugins=(git zsh-autosuggestions zsh-z sudo asdf)
 
 
 
@@ -115,7 +115,7 @@ PROMPT='$(kube_ps1)'$PROMPT
 source $HOME/.aliases
 source $HOME/.variables
 export DISABLE_AUTO_TITLE='true'
-
+export GO111MODULE=on
 # fzf
 source $HOME/.config/fzf/completion.zsh
 source $HOME/.config/fzf/key-bindings.zsh

@@ -22,3 +22,7 @@ fi
 if [ -d "$HOME/.poetry" ] ; then 
     export PATH="$HOME/.poetry/bin:$PATH"
 fi
+# dotnet
+if [ -d "$HOME/.dotnet" ] ; then
+    PATH="$HOME/.dotnet:$PATH"
+fi

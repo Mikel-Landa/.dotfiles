@@ -28,7 +28,7 @@ alias gco="git checkout"
 alias gpt="git push origin --tags"
 alias gcm="git commit -m"
 alias gcam="git commit -am"
-alias gad="git add ."
+alias gad="git add -A"
 alias gp="git push"
 alias gpl="git pull"
 alias gmdmm="git checkout dev && git merge master && git checkout master && git merge dev"
@@ -38,6 +38,7 @@ alias t="tmux"
 alias ta="t a -t"
 alias tls="t ls"
 alias tn="t new -t"
+alias ts="t new -s"
 alias mux='pgrep -vx tmux > /dev/null && \
 		tmux new -d -s delete-me && \
 		tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && \
@@ -58,5 +59,18 @@ alias s='systemctl'
 alias k='kubectl'
 alias kctx='kubectx'
 alias kns='kubens'
+
+#useful base64 encoding
+
+function enkode() {
+    out=$(echo $1 | base64)
+    if command -v clip.exe &> /dev/null
+    then
+        echo $out | tr '\n' ' ' | clip.exe
+    else
+        echo $out | tr '\n' ' ' | xclip
+    fi
+}
+
 # terraform
 alias tf="terraform"
