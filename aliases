@@ -47,7 +47,7 @@ alias mux='pgrep -vx tmux > /dev/null && \
 
 # nvim
 
-alias vim='nvim'
+#alias vim='nvim'
 
 
 
@@ -62,14 +62,25 @@ alias kns='kubens'
 
 #useful base64 encoding
 
-function enkode() {
-    out=$(echo $1 | base64)
+function dekode() {
+    out=$(echo $1 | base64 -d)
     if command -v clip.exe &> /dev/null
     then
-        echo $out | tr '\n' ' ' | clip.exe
+        echo $out | tr '\n' ' ' |  clip.exe
     else
         echo $out | tr '\n' ' ' | xclip
     fi
+    echo $out
+}
+function enkode() {
+    out=$(echo $1 | base64 -w0)
+    if command -v clip.exe &> /dev/null
+    then
+        echo $out | tr '\n' ' ' |  clip.exe
+    else
+        echo $out | tr '\n' ' ' | xclip
+    fi
+    echo $out
 }
 
 # terraform

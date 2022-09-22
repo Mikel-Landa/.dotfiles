@@ -1,1 +1,0 @@
-/home/mikel/.dotfiles/config/lvim/after/ftplugin/python.lua

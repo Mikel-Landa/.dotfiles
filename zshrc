@@ -70,7 +70,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-z sudo asdf)
+plugins=(git zsh-autosuggestions zsh-z sudo asdf docker docker-compose)
 
 
 
@@ -119,9 +119,13 @@ export GO111MODULE=on
 # fzf
 source $HOME/.config/fzf/completion.zsh
 source $HOME/.config/fzf/key-bindings.zsh
+source $HOME/.config/autocomplete/*
 # needs to run sudo pacman -Fy (only once)
 alias pacfz="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
 alias yayfz="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk \"{print \$2}\")' | xargs -ro  yay -S"
 
 # source autocompletions
  for f in $HOME/.config/completions/zsh/*; do source $f; done
+
+# exports
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
