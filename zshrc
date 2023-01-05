@@ -70,7 +70,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-z sudo asdf docker docker-compose)
+plugins=(git zsh-autosuggestions zsh-z sudo asdf docker docker-compose asdf)
 
 
 
@@ -78,7 +78,7 @@ PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.bin:$HOME/bin:$HOME/.emacs.d/bin:$HOM
 # Clean PATH variable
 export PATH=$(echo $PATH | awk -F: '
 { for (i = 1; i <= NF; i++) arr[$i]; }
-END { for (i in arr) printf "%s:" , i; printf "\n"; } ')
+END { for (i in arr) printf "%s:" , i; printf "\n"; } '| sed -e 's/\/:\/$//')
 
 source $ZSH/oh-my-zsh.sh
 
