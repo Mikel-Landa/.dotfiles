@@ -70,7 +70,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-z sudo asdf docker docker-compose asdf)
+plugins=(git zsh-autosuggestions z sudo asdf docker docker-compose kube-ps1)
 
 
 
@@ -109,7 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # https://github.com/jonmosco/kube-ps1
-source $HOME/plugins/kube-ps1/kube-ps1.sh
 PROMPT='$(kube_ps1)'$PROMPT
 
 source $HOME/.aliases
