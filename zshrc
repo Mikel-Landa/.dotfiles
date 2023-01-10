@@ -128,3 +128,7 @@ alias yayfz="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk
 
 # exports
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+export PATH=$PATH:/home/mikel/bin
+
+source '/home/mikel/lib/azure-cli/az.completion'
