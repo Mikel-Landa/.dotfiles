@@ -18,6 +18,13 @@ if [ -d "$HOME/.nvm" ] ; then
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
+if [ -d "$HOME/.aliases" ] ; then
+source $HOME/.aliases
+fi
+if [ -d "$HOME/.variables" ] ; then
+source $HOME/.variables
+fi
+
 # poetry setup
 if [ -d "$HOME/.poetry" ] ; then 
     export PATH="$HOME/.poetry/bin:$PATH"

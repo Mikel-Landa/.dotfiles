@@ -110,23 +110,13 @@ source $ZSH/oh-my-zsh.sh
 # https://github.com/jonmosco/kube-ps1
 PROMPT='$(kube_ps1)'$PROMPT
 
-source $HOME/.aliases
-source $HOME/.variables
 export DISABLE_AUTO_TITLE='true'
 export GO111MODULE=on
 # fzf
 source $HOME/.config/fzf/*.zsh
-# needs to run sudo pacman -Fy (only once)
-alias pacfz="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
-alias yayfz="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk \"{print \$2}\")' | xargs -ro  yay -S"
 
 # source autocompletions
  for f in $HOME/.config/completions/zsh/*; do source $f; done
 
 autoload -Uz compinit
 compinit
-
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

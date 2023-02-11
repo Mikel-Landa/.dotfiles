@@ -50,6 +50,7 @@ rm Meslo.zip
 
 echo -e "${GREEN}Installing node and npm...${NC}"
 
+export PROFILE="/dev/null" # Dont append nvm sources to rc
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -58,7 +59,8 @@ nvm install 16
 nvm install 18
 nvm use 16
 
-
+echo -e "${GREEN}Installing tree-sitter-cli...${NC}"
+sudo npm install tree-sitter-cli -g
 
 
 
