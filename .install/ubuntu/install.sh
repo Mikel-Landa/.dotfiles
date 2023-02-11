@@ -71,6 +71,9 @@ echo -e "${GREEN}Installing and setting up RCM...${NC}"
 sudo apt install -y rcm
 rcup
 
+echo -e "${GREEN}Installing and setting up Git Credential Manager...${NC}"
+curl -Ls https://aka.ms/gcm/linux-install-source.sh | bash -s && git-credential-manager-core configure
+sudo rm -rf git-credential-manager
 
 
 
