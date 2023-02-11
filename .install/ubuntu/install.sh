@@ -14,7 +14,8 @@ sudo apt-get install -y \
 	curl \
 	git \
   ripgrep \
-  zip
+  zip \
+  autojump
 	
 
 echo -e "${GREEN}Installing Neovim...${NC}"
@@ -25,11 +26,11 @@ sudo apt-get update
 sudo apt-get install -y python3-dev python3-pip
 sudo apt-get install -y neovim
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
-sudo update-alternatives --config vi
+sudo update-alternatives --set vi /usr/bin/nvim 
 sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
-sudo update-alternatives --config vim
+sudo update-alternatives --set vim /usr/bin/nvim
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
-sudo update-alternatives --config editor
+sudo update-alternatives --set editor /usr/bin/nvim
 
 echo -e "${GREEN}Installing zsh...${NC}"
 
@@ -44,9 +45,9 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 echo -e "${GREEN}Installing Nerdfont...${NC}"
 
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/Meslo.zip
-mkdir -p ~/.fonts || true
-unzip -o Meslo.zip -d ~/.fonts 
+sudo unzip -o Meslo.zip -d /usr/local/share/fonts
 rm Meslo.zip
+sudo fc-cache -fv
 
 echo -e "${GREEN}Installing node and npm...${NC}"
 

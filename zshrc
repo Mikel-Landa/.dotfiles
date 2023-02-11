@@ -70,7 +70,7 @@ HYPHEN_INSENSITIVE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions z sudo asdf docker docker-compose kube-ps1 terraform)
+plugins=(git zsh-autosuggestions asdf docker docker-compose kube-ps1 terraform)
 
 
 
@@ -114,6 +114,8 @@ export DISABLE_AUTO_TITLE='true'
 export GO111MODULE=on
 # fzf
 source $HOME/.config/fzf/*.zsh
+# autojump
+source /usr/share/autojump/autojump.sh
 
 # source autocompletions
  for f in $HOME/.config/completions/zsh/*; do source $f; done
