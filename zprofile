@@ -25,6 +25,21 @@ if [ -d "$HOME/.variables" ] ; then
 source $HOME/.variables
 fi
 
+# fzf
+if [ -d "/usr/share/doc/fzf/examples" ] ; then
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+fi
+# autojump
+if [ -d "/usr/share/autojump/" ] ; then
+source /usr/share/autojump/autojump.sh
+fi
+
+# source autocompletions
+if [ -d "$HOME/.config/completions/zsh" ] ; then
+  for f in $HOME/.config/completions/zsh/*; do source $f; done
+fi
+
 # poetry setup
 if [ -d "$HOME/.poetry" ] ; then 
     export PATH="$HOME/.poetry/bin:$PATH"

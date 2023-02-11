@@ -112,13 +112,6 @@ PROMPT='$(kube_ps1)'$PROMPT
 
 export DISABLE_AUTO_TITLE='true'
 export GO111MODULE=on
-# fzf
-source $HOME/.config/fzf/*.zsh
-# autojump
-source /usr/share/autojump/autojump.sh
-
-# source autocompletions
- for f in $HOME/.config/completions/zsh/*; do source $f; done
 
 autoload -Uz compinit
 compinit
