@@ -16,7 +16,8 @@ sudo apt-get install -y \
   ripgrep \
   zip \
   autojump \
-  pas
+  pass \
+  gpg
 	
 
 echo -e "${GREEN}Installing Neovim...${NC}"
@@ -75,7 +76,7 @@ sudo apt install -y rcm
 rcup
 
 echo -e "${GREEN}Installing and setting up Git Credential Manager...${NC}"
-curl -Ls https://aka.ms/gcm/linux-install-source.sh | bash -s && git-credential-manager-core configure
+curl -Ls https://aka.ms/gcm/linux-install-source.sh | bash -s && git-credential-manager configure
 sudo rm -rf git-credential-manager
 
 

@@ -1,0 +1,162 @@
+﻿Diagnose log at 2023-02-12T15:43:03Z
+
+AppPath: /usr/local/bin/git-credential-manager
+InstallDir: /usr/local/share/gcm-core/
+Version: 2.0.926+fb1942af15
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Linux
+OSVersion: Linux Mikel-Desktop 5.15.79.1-microsoft-standard-WSL2 #1 SMP Wed Nov 23 01:01:46 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux
+Reading environment variables... OK
+ Variables:
+GO111MODULE=on
+HOME=/home/mikel
+TERM=xterm-256color
+WSL_DISTRO_NAME=Ubuntu
+LESS=-R
+LANG=C.UTF-8
+WSL2_GUI_APPS_ENABLED=1
+WT_PROFILE_ID={51855cb2-8cce-5362-8f54-464b92b32386}
+HOSTTYPE=x86_64
+NAME=Mikel-Desktop
+NVM_INC=/home/mikel/.nvm/versions/node/v16.19.0/include/node
+PAGER=less
+AUTOJUMP_SOURCED=1
+WT_SESSION=2e3a2c3f-f9dd-4e25-9dc7-890ff7d59b45
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+XDG_RUNTIME_DIR=/mnt/wslg/runtime-dir
+PULSE_SERVER=/mnt/wslg/PulseServer
+WSLENV=WT_SESSION::WT_PROFILE_ID
+SHELL=/usr/bin/zsh
+_=/usr/local/bin/git-credential-manager
+PWD=/home/mikel/.dotfiles/.install/ubuntu
+GCM_CREDENTIAL_STORE=gpg
+LOGNAME=mikel
+SSH_AUTH_SOCK=/mnt/wslg/runtime-dir/ssh-agent.socket
+DISABLE_AUTO_TITLE=true
+ZSH=/home/mikel/.oh-my-zsh
+DISPLAY=:0
+WSL_INTEROP=/run/WSL/9_interop
+SHLVL=1
+NVM_BIN=/home/mikel/.nvm/versions/node/v16.19.0/bin
+LSCOLORS=Gxfxcxdxbxegedabagacad
+NVM_DIR=/home/mikel/.nvm
+GIT_TRACE=/home/mikel/git.log
+OLDPWD=/home/mikel
+USER=mikel
+WAYLAND_DISPLAY=wayland-0
+GIT_TRACE2_PARENT_SID=54f4ae0f-57f6-41d5-95ed-1576a6a2b343
+AUTOJUMP_ERROR_PATH=/home/mikel/.local/share/autojump/errors.log
+PATH=/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Razer Chroma SDK/bin:/usr/local/bin:/mnt/c/Program Files/Razer/ChromaBroadcast/bin:/usr/lib/wsl/lib:/usr/bin:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/usr/local/games:/home/mikel/.nvm/versions/node/v16.19.0/bin:/home/mikel/.bin:/usr/games:/mnt/c/Users/mikel/AppData/Local/Microsoft/WindowsApps:/mnt/c/Program Files/AutoFirma/AutoFirma:/mnt/c/Windows:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Windows/system32:/mnt/c/Program Files (x86)/Razer/ChromaBroadcast/bin:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/sbin:/mnt/c/Windows/system32/config/systemprofile/AppData/Local/Microsoft/WindowsApps:/mnt/c/Windows/System32/Wbem:/usr/sbin:/home/mikel/.poetry/bin:/mnt/c/Program Files/Calibre2/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/bin:/usr/local/sbin:
+NVM_CD_FLAGS=-q
+GCM_TRACE=/home/mikel/git.log
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is '/tmp/'...
+Checking basic file I/O...
+Writing to temporary file '/tmp/bb8f4888b704960add05825e'... OK
+Reading from temporary file '/tmp/bb8f4888b704960add05825e'... OK
+Deleting temporary file '/tmp/bb8f4888b704960add05825e'... OK
+Testing IFileSystem instance...
+UserHomePath: /home/mikel
+UserDataDirectoryPath: /home/mikel/.gcm
+GetCurrentDirectory(): /home/mikel/.dotfiles/.install/ubuntu
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:39979/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.34.1'
+Locating current repository... OK
+Git repository at '/home/mikel/.dotfiles/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:/home/mikel/.gitconfig	user.email=mikel923@hotmail.com
+file:/home/mikel/.gitconfig	user.name=Mikel Landa
+file:/home/mikel/.gitconfig	credential.helper=
+file:/home/mikel/.gitconfig	credential.helper=/usr/local/bin/git-credential-manager-core
+file:/home/mikel/.gitconfig	credential.msauthhelper=
+file:/home/mikel/.gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=true
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	remote.origin.url=https://github.com/Mikel-Landa/.dotfiles.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.main.remote=origin
+file:.git/config	branch.main.merge=refs/heads/main
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker not supported.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: /home/mikel/.local/.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: /home/mikel/.local/.IdentityService/msal.cache
+KeyringCollection: 
+KeyringSchemaName: 
+KeyringSecretLabel: 
+KeyringAttribute1: (,)
+KeyringAttribute2: (,)
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
