@@ -21,7 +21,8 @@ pips() {
     done
 }
 # MISC
-alias ll="ls -la"
+alias ll="ls -lah"
+alias lt="ls -laht"
 
 #GIT 
 alias gco="git checkout"

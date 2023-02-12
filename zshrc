@@ -113,5 +113,11 @@ PROMPT='$(kube_ps1)'$PROMPT
 export DISABLE_AUTO_TITLE='true'
 export GO111MODULE=on
 
+#GCM
+export GCM_CREDENTIAL_STORE='gpg'
+export GIT_TRACE=$HOME/git.log
+export GCM_TRACE=$HOME/git.log
+
+
 autoload -Uz compinit
 compinit

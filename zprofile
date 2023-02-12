@@ -5,6 +5,9 @@ source $HOME/.profile
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+if [ -d "$HOME/.bin" ] ; then
+    PATH="$HOME/.bin:$PATH"
+fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
@@ -18,11 +21,11 @@ if [ -d "$HOME/.nvm" ] ; then
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
-if [ -d "$HOME/.aliases" ] ; then
-source $HOME/.aliases
+if [ -f "$HOME/.aliases" ] ; then
+  source $HOME/.aliases
 fi
-if [ -d "$HOME/.variables" ] ; then
-source $HOME/.variables
+if [ -f "$HOME/.variables" ] ; then
+  source $HOME/.variables
 fi
 
 # fzf

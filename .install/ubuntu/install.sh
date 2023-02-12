@@ -1,7 +1,7 @@
 #!/bin/bash
 
-GREEN="\033[0;32m"
-RED='\033[0;31m'
+GREEN="\n\033[0;32m"
+RED='\n\033[0;31m'
 NC="\033[0m" 
 
 echo -e "${GREEN}Updating and Upgrading Ubuntu...${NC}"
@@ -15,7 +15,8 @@ sudo apt-get install -y \
 	git \
   ripgrep \
   zip \
-  autojump
+  autojump \
+  pas
 	
 
 echo -e "${GREEN}Installing Neovim...${NC}"
@@ -31,11 +32,13 @@ sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
 sudo update-alternatives --set vim /usr/bin/nvim
 sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 sudo update-alternatives --set editor /usr/bin/nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 echo -e "${GREEN}Installing zsh...${NC}"
 
 sudo apt-get install -y zsh fzf
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh) $USER
 
 echo -e "${GREEN}Setting up oh-my-zsh...${NC}"
 
