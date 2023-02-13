@@ -62,6 +62,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 nvm install 16
 nvm install 18
+sudo apt-get install -y npm
 nvm use 16
 
 echo -e "${GREEN}Installing tree-sitter-cli...${NC}"
