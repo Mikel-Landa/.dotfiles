@@ -21,7 +21,8 @@ pips() {
     done
 }
 # MISC
-alias ll="ls -la"
+alias ll="ls -lah"
+alias lt="ls -laht"
 
 #GIT 
 alias gco="git checkout"
@@ -46,9 +47,6 @@ alias mux='pgrep -vx tmux > /dev/null && \
 		tmux kill-session -t delete-me && \
 		tmux attach || tmux attach'
 
-# nvim
-
-#alias vim='nvim'
 
 
 
