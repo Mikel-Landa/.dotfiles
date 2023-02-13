@@ -50,3 +50,4 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 if [ -f .profile.arch ]; then
 	source $HOME/.profile.arch
 fi
+. "$HOME/.cargo/env"

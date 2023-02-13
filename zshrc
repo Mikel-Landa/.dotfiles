@@ -74,7 +74,7 @@ plugins=(git zsh-autosuggestions z sudo asdf docker docker-compose kube-ps1)
 
 
 
-PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.bin:$HOME/bin:$HOME/.emacs.d/bin:$HOME/.poetry/bin:/usr/local/go/bin:$HOME/go/bin:$PATH"
+PATH="${KREW_ROOT:-$HOME/.krew}/bin:$HOME/.bin:$HOME/bin:$HOME/.emacs.d/bin:$HOME/.poetry/bin:/usr/local/go/bin:$HOME/go/bin:$PATH:/opt/mssql-tools/bin/:$HOME/.dotnet/:$HOME/.local/bin"
 # Clean PATH variable
 export PATH=$(echo $PATH | awk -F: '
 { for (i = 1; i <= NF; i++) arr[$i]; }
@@ -115,10 +115,14 @@ source $HOME/.aliases
 source $HOME/.variables
 export DISABLE_AUTO_TITLE='true'
 export GO111MODULE=on
+
 # fzf
 source $HOME/.config/fzf/completion.zsh
 source $HOME/.config/fzf/key-bindings.zsh
 source $HOME/.config/autocomplete/*
+# RUST
+source "$HOME/.cargo/env"
+
 # needs to run sudo pacman -Fy (only once)
 alias pacfz="pacman -Slq | fzf -m --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk \"{print \$2}\")' | xargs -ro sudo pacman -S"
 alias yayfz="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk \"{print \$2}\")' | xargs -ro  yay -S"
@@ -128,7 +132,8 @@ alias yayfz="yay -Slq | fzf -m --preview 'cat <(yay -Si {1}) <(yay -Fl {1} | awk
 
 # exports
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+export TERM=xterm-256color
 
-export PATH=$PATH:/home/mikel/bin
-
-source '/home/mikel/lib/azure-cli/az.completion'
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

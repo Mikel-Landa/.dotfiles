@@ -32,6 +32,7 @@ alias gad="git add -A"
 alias gp="git push"
 alias gpl="git pull"
 alias gmdmm="git checkout dev && git merge master && git checkout master && git merge dev"
+alias noci="skip_ci"
 # TMUX
 
 alias t="tmux"
