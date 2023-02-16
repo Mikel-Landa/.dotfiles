@@ -18,7 +18,6 @@ sudo apt-get install -y \
   autojump \
   pass \
   gpg
-	
 
 echo -e "${GREEN}Installing Neovim...${NC}"
 
@@ -81,4 +80,4 @@ curl -Ls https://aka.ms/gcm/linux-install-source.sh | bash -s && git-credential-
 sudo rm -rf git-credential-manager
 
 
-
+echo -e "${RED}In case microsoft repos break apt upgrade find solution: https://bugs.launchpad.net/ubuntu/+source/unixodbc/+bug/2007288${NC}"

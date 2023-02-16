@@ -120,6 +120,7 @@ export GIT_TRACE=$HOME/git.log
 export GCM_TRACE=$HOME/git.log
 export TERM=xterm-256color
 
+source ~/.zprofile
 
 autoload -Uz compinit
 compinit
